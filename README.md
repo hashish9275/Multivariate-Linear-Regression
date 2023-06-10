@@ -25,16 +25,17 @@ Register number: 212222230047
 '''
 import pandas as pd
 from sklearn import linear_model
-df=pd.read_csv("cars (1).csv")
+df=pd.read_csv("cars.csv")
 a=df[['Weight','Volume']]
 b=df[['CO2']]
 regr=linear_model.LinearRegression()
 regr.fit(a,b)
-print("coefficient",regr.coef_)
+print("Coefficient:",regr.coef_)
 print("Intercept:",regr.intercept_)
 print("Amount:",regr.predict([[3300,1300]]))
 ```
 ## Output:
+![image](https://github.com/hashish9275/Multivariate-Linear-Regression/assets/118707521/5f07e129-2d61-47a0-84e3-b6b6d5c4b2ac)
 
 
 ## Result
